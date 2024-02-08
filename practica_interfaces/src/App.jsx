@@ -1,38 +1,41 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { Routes } from "react-router-dom"
 import "./estilos.css";
 import { Footer } from "./componentes/Footer";
 import { Articulos } from "./componentes/Articulos";
 import { Aside } from "./componentes/Aside";
 import { Info } from "./componentes/Info";
+import { Bienvenida } from "./componentes/Bienvenida";
+import { Construccion } from "./componentes/Construccion";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
+    <Router>
     <>
       <header id="header">
         <div className="wrap_cabecera">
           <div id="logo">
             <span className="gear">S</span>
             <h3>
-              <a href="blog.html">BLOG</a>
+              <NavLink to="/blog">BLOG</NavLink>
             </h3>
           </div>
           <nav id="menu">
             <ul>
               <li>
-                <a>INICIO</a>
+                <NavLink to="/">INICIO</NavLink>
               </li>
               <li>
-                <a>BLOG</a>
+                <NavLink to="/blog">BLOG</NavLink>
               </li>
               <li>
-                <a>FORMACIÓN</a>
+                <NavLink to="/formacion">FORMACIÓN</NavLink>
               </li>
               <li>
-                <a>CONTACTO</a>
+                <NavLink to="/contacto">CONTACTO</NavLink>
               </li>
             </ul>
           </nav>
@@ -45,15 +48,32 @@ function App() {
         <Info></Info>
 
         <div className="contenedor-flex">
+
+
+
           <Aside></Aside>
-          <Articulos></Articulos>
+
+
+
+
+          <Routes>
+            <Route path="/" element={ <Bienvenida /> } />
+            <Route path="/blog" element={ <Articulos /> } />
+            <Route path="/formacion" element={ <Construccion /> } />
+            <Route path="/contacto" element={ <Construccion /> } />
+          </Routes>
+
+
+
+
         </div>
+
 
       </main>
 
-      
       <Footer></Footer>
     </>
+    </Router>
   );
 }
 
