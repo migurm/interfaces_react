@@ -8,6 +8,7 @@ import { Aside } from "./componentes/Aside";
 import { Info } from "./componentes/Info";
 import { Bienvenida } from "./componentes/Bienvenida";
 import { Construccion } from "./componentes/Construccion";
+import  ArticulosAPI  from "./componentes/ArticulosAPI";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -58,7 +59,7 @@ function App() {
 
           <Routes>
             <Route path="/" element={ <Bienvenida /> } />
-            <Route path="/blog" element={ <Articulos /> } />
+            <Route path="/blog" element={ <ArticulosAPI /> } />
             <Route path="/formacion" element={ <Construccion /> } />
             <Route path="/contacto" element={ <Construccion /> } />
           </Routes>

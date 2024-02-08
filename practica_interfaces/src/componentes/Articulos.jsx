@@ -11,7 +11,7 @@ export const Articulos = () => {
 				<span>Categoría: Pruebas</span>
 			</div>
 			<h4>
-				<a href="#">Título de artículo 4</a>
+				<a href="#">Título de artículo 43</a>
 			</h4>
 			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
 			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
